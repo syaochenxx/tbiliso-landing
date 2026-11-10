@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тбилисо — ресторан грузинской кухни в Москве | Бронь столика онлайн</title>
+<meta name="description" content="Ресторан грузинской кухни Тбилисо в Москве: хачапури, хинкали, домашние рецепты. Бронируйте столик онлайн без звонка.">
+<meta name="theme-color" content="#c95944">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='28' font-size='26' font-family='Georgia, serif'%3E&#1055;&#1090;&#1035;&#1056;&#1056;&#1035;&#1041;&#1086;%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Тбилисо",
+  "description": "Ресторан грузинской кухни в Москве. Хачапури, хинкали, домашняя кухня, уютный зал.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Малая Ордынка, 15",
+    "addressLocality": "Москва",
+    "postalCode": "119019",
+    "addressCountry": "RU"
+  },
+  "telephone": "+7 495 123-45-67",
+  "priceRange": "₽₽",
+  "servesCuisine": ["грузинская"],
+  "cuisine": "грузинская",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "12:00",
+      "closes": "23:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday", "Saturday"],
+      "opens": "12:00",
+      "closes": "00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday"],
+      "opens": "12:00",
+      "closes": "22:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "124"
+  },
+  "url": "https://tbiliso.example.ru/"
+}
+</script>
+
+<style>
+:root {
+  --terracotta: #c95944;
+  --terracotta-dark: #a84533;
+  --ochre: #d9a441;
+  --ochre-dark: #b37f2a;
+  --green: #2e5e4e;
+  --green-dark: #1f4a3d;
+  --cream: #f7f3ea;
+  --cream-dark: #efe4cc;
+  --text: #2b2b2b;
+  --text-muted: #6b6b6b;
+  --white: #ffffff;
+  --max-width: 1180px;
+  --header-height: 72px;
+  --radius: 14px;
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.07);
+  --transition: 0.28s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 12px);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Georgia", "Times New Roman", "Bitstream Charter", Times, serif;
+  margin: 0;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--terracotta);
+  color: var(--white);
+  border: none;
+  padding: 11px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: var(--terracotta-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(201, 89, 68, 0.35);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-green {
+  background: var(--green);
+}
+
+.btn-green:hover {
+  background: var(--green-dark);
+  box-shadow: 0 8px 20px rgba(46, 94, 78, 0.35);
+}
+
+.btn-reset {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.btn-reset:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background: rgba(247, 243, 234, 0.94);
+  border-bottom: 1px solid rgba(201, 89, 68, 0.1);
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--terracotta);
+  letter-spacing: -0.02em;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10000;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #f7f3ea;
+  z-index: 9999;
+  transform: translateX(100%);
+  transition: transform 0.34s ease;
+  overflow-y: auto;
+}
+
+.nav-panel.open {
+  transform: translateX(0);
+}
+
+.nav-panel .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 20px;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  list-style: none;
+}
+
+.nav-panel .nav-links a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 0;
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  header {
+    backdrop-filter: blur(10px);
+  }
+  .menu-toggle { display: none; }
+  .nav-panel {
+    position: static;
+    transform: none;
+    background: transparent;
+    height: auto;
+    width: auto;
+  }
+  .nav-panel .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: none;
+    overflow: visible;
+  }
+  .nav-panel .nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+    position: relative;
+    padding: 8px 0;
+  }
+  .nav-panel .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--terracotta);
+    transition: var(--transition);
+  }
+  .nav-panel .nav-links a:hover::after {
+    width: 100%;
+  }
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 56px 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding-top: calc(var(--header-height) + 20px);
+  padding-bottom: 60px;
+  position: relative;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(600px, 90vw);
+  height: min(600px, 90vw);
+  background: radial-gradient(circle, rgba(217, 164, 65, 0.18), transparent 70%);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.hero-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 7vw, 3.4rem);
+  color: var(--green);
+  margin-bottom: 14px;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2.6vw, 1.25rem);
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto 26px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-actions .btn {
+  min-width: 210px;
+  font-size: 1.05rem;
+  padding: 14px 26px;
+}
+
+@media (min-width: 640px) {
+  section { padding: 80px 24px; }
+  .hero { padding-top: calc(var(--header-height) + 40px); padding-bottom: 80px; }
+}
+
+/* ===== Advantages ===== */
+.advantages {
+  background: var(--cream);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.advantage-card {
+  background: var(--white);
+  padding: 26px 20px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(201, 89, 68, 0.08);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition);
+}
+
+.advantage-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--ochre), var(--terracotta));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.advantage-card h3 {
+  font-size: 1.15rem;
+  color: var(--terracotta-dark);
+}
+
+.advantage-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.geo-facts {
+  max-width: var(--max-width);
+  margin: 34px auto 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+}
+
+.geo-facts p {
+  margin-bottom: 8px;
+}
+
+/* ===== Menu ===== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.menu-card {
+  background: var(--white);
+  border: 1px solid rgba(201, 89, 68, 0.1);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
+}
+
+.menu-card h3 {
+  font-size: 1.18rem;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+
+.menu-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.menu-price {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.3rem;
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
+/* ===== Atmosphere ===== */
+.atmosphere {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.atmosphere-text h3 {
+  font-size: 1.6rem;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+
+.atmosphere-text p {
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-size: 1.02rem;
+}
+
+.placeholders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.placeholder {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #e8dcc8, #c9b48a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #7a5d34;
+  font-weight: 600;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.placeholder svg {
+  width: 46px;
+  height: 46px;
+  opacity: 0.55;
+}
+
+@media (min-width: 768px) {
+  .atmosphere { grid-template-columns: 1fr 1fr; }
+  .contacts-grid { grid-template-columns: 1fr 340px; gap: 30px; }
+}
+
+/* ===== Reviews ===== */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.review-card {
+  background: var(--white);
+  border: 1px solid rgba(201, 89, 68, 0.1);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stars {
+  color: var(--ochre);
+  font-size: 1.35rem;
+  letter-spacing: 3px;
+  margin-bottom: 2px;
+}
+
+.review-card p {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  flex: 1;
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+.review-author span {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* ===== Steps ===== */
+.steps {
+  background: var(--cream);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid rgba(201, 89, 68, 0.08);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.step-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.step h3 {
+  margin-bottom: 10px;
+  color: var(--green);
+  font-size: 1.2rem;
+}
+
+.step p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+/* ===== Booking ===== */
+.booking {
+  background: var(--white);
+}
+
+.booking-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#booking-form {
+  background: linear-gradient(135deg, #ffffff, var(--cream));
+  padding: 32px 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(201, 89, 68, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(201, 89, 68, 0.2);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 4px rgba(201, 89, 68, 0.12);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 95px;
+}
+
+.error-msg {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: none;
+}
+
+.input-error {
+  border-color: #c0392b !important;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: var(--green-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(46, 94, 78, 0.3);
+}
+
+.btn-submit:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+
+#success-message {
+  background: var(--green);
+  color: var(--white);
+  padding: 36px 24px;
+  border-radius: var(--radius);
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(31, 74, 61, 0.15);
+}
+
+#success-message h3 {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+#success-message p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  max-width: 420px;
+}
+
+@media (min-width: 1024px) {
+  section { padding: 100px 32px; }
+  #booking-form { padding: 40px 34px; }
+}
+
+/* ===== Contacts ===== */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: var(--white);
+  border: 1px solid rgba(201, 89, 68, 0.1);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+
+.contact-card h3 {
+  font-size: 1.4rem;
+  color: var(--green);
+  margin-bottom: 18px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.icon-box {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--terracotta);
+}
+
+.contact-item div {
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.contact-item a {
+  color: var(--terracotta);
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--terracotta);
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.socials a:hover {
+  background: var(--terracotta);
+  color: var(--white);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--green-dark);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 36px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-copy {
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <a href="#" class="logo">Тбилисо</a>
+
+    <button class="menu-toggle" aria-label="Открыть меню" id="menuToggle">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-panel" id="navPanel">
+      <ul class="nav-links">
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#atmosphere">Атмосфера</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+        <li><a href="#booking" class="btn" style="padding: 8px 16px; font-size: 0.9rem;">Забронировать</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Тбилисо — грузинская кухня в Москве</h1>
+      <p class="hero-sub">Домашние хачапури и хинкали, большие порции, уютный зал и бронь столика онлайн без звонка. Приходите в гости — мы ждём вас!</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-green">Забронировать столик</a>
+        <a href="#menu" class="btn">Посмотреть меню</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Почему мы -->
+  <section class="advantages" id="advantages">
+    <div class="section-header">
+      <h2>Почему выбирают Тбилисо</h2>
+      <p>Четыре причины зайти к нам ещё сегодня</p>
+    </div>
+
+    <div class="advantages-grid">
+      <article class="advantage-card">
+        <div class="icon" aria-hidden="true">🍲</div>
+        <h3>Домашняя кухня</h3>
+        <p>Рецепты из семейных кухонь Грузии — как у бабушки в Тбилиси.</p>
+      </article>
+      <article class="advantage-card">
+        <div class="icon" aria-hidden="true">🧀</div>
+        <h3>Большие порции</h3>
+        <p>Хачапури и хинкали на любой аппетит — никто не уходит голодным.</p>
+      </article>
+      <article class="advantage-card">
+        <div class="icon" aria-hidden="true">📱</div>
+        <h3>Бронь без звонка</h3>
+        <p>Оставьте заявку на сайте — мы перезвоним сами и подтвердим стол.</p>
+      </article>
+      <article class="advantage-card">
+        <div class="icon" aria-hidden="true">🛋️</div>
+        <h3>Уютный зал</h3>
+        <p>Тёплый интерьер, мягкий свет и гостеприимная атмосфера.</p>
+      </article>
+    </div>
+
+    <div class="geo-facts">
+      <p><strong>Город:</strong> Москва</p>
+      <p><strong>Кухня:</strong> грузинская</p>
+      <p><strong>Средний чек:</strong> 1500–2500 ₽</p>
+      <p><strong>Фишка:</strong> бронь столика онлайн без звонка</p>
+    </div>
+  </section>
+
+  <!-- Меню -->
+  <section class="menu" id="menu">
+    <div class="section-header">
+      <h2>Меню</h2>
+      <p>Лучшие блюда грузинской кухни</p>
+    </div>
+
+    <div class="menu-grid">
+      <article class="menu-card">
+        <h3>Хачапури по-аджарски</h3>
+        <p>Лодочка из теста с яйцом, сулугуни и сливочным маслом.</p>
+        <div class="menu-price">650 ₽</div>
+      </article>
+      <article class="menu-card">
+        <h3>Хачапури по-мегрельски</h3>
+        <p>Закрытый пирог с плавленым сыром сулугуни и яйцом.</p>
+        <div class="menu-price">590 ₽</div>
+      </article>
+      <article class="menu-card">
+        <h3>Хинкали по-грузински</h3>
+        <p>Сочный говяжий фарш с бульоном и специями (1 шт.).</p>
+        <div class="menu-price">80 ₽</div>
+      </article>
+      <article class="menu-card">
+        <h3>Чахохбили из курицы</h3>
+        <p>Курица в томатном соусе с зелёным перцем и петрушкой.</p>
+        <div class="menu-price">720 ₽</div>
+      </article>
+      <article class="menu-card">
+        <h3>Лобио из красной фасоли</h3>
+        <p>Тушёное лобио с орехами и пряностями в горшочке.</p>
+        <div class="menu-price">450 ₽</div>
+      </article>
+      <article class="menu-card">
+        <h3>Домашнее вино</h3>
+        <p>Кахетинское красное вино, бокальное или в карафе.</p>
+        <div class="menu-price">950 ₽</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Атмосфера -->
+  <section class="atmosphere" id="atmosphere">
+    <div class="atmosphere-text">
+      <h2>Атмосфера зала</h2>
+      <h3>Гостеприимство по-грузински</h3>
+      <p>Просторный светлый зал с мягкими диванами, тёплым освещением и традиционным декором. Идеальное место для семейного ужина, свидания или встречи с друзьями.</p>
+      <p>Мы рады гостям каждый день с 12:00 до полуночи.</p>
+    </div>
+    <div class="placeholders">
+      <figure class="placeholder" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <figcaption>Зал ресторана</figcaption>
+      </figure>
+      <figure class="placeholder" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <figcaption>Уютный уголок</figcaption>
+      </figure>
+      <figure class="placeholder" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <figcaption>Летняя терраса</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section class="reviews" id="reviews">
+    <div class="section-header">
+      <h2>Отзывы гостей</h2>
+      <p>Что говорят о нас посетители</p>
+    </div>
+
+    <div class="reviews-grid">
+      <article class="review-card">
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Лучшие хинкали в Москве! Подают горячими, с бульоном внутри, просто как в Тбилиси.</p>
+        <p class="review-author">Анна <span>· Москва</span></p>
+      </article>
+      <article class="review-card">
+        <div class="stars" aria-label="Оценка 4 из 5">★★★★☆</div>
+        <p>Забронировали онлайн за минуту, нас встретили точно ко времени. Хачапури по-аджарски — отдельный восторг.</p>
+        <p class="review-author">Дмитрий <span>· Москва</span></p>
+      </article>
+      <article class="review-card">
+        <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Уютный зал, вкусное домашнее вино и очень вежливый персонал. Обязательно вернёмся.</p>
+        <p class="review-author">Елена <span>· Москва</span></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Как забронировать -->
+  <section class="steps" id="steps">
+    <div class="section-header">
+      <h2>Как забронировать столик</h2>
+      <p>Три простых шага к ужину в Тбилисо</p>
+    </div>
+
+    <div class="steps-grid">
+      <article class="step">
+        <div class="step-number">1</div>
+        <h3>Оставляете заявку</h3>
+        <p>Заполните форму на сайте: имя, телефон, дата, время и число гостей.</p>
+      </article>
+      <article class="step">
+        <div class="step-number">2</div>
+        <h3>Мы перезваниваем</h3>
+        <p>Администратор свяжется с вами для подтверждения брони.</p>
+      </article>
+      <article class="step">
+        <div class="step-number">3</div>
+        <h3>Столик готов</h3>
+        <p>Ждём вас в Тбилисо в назначенное время.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Форма бронирования -->
+  <section class="booking" id="booking">
+    <div class="booking-inner">
+      <div class="section-header" style="text-align: left;">
+        <h2>Бронирование столика</h2>
+        <p>Оформите заявку онлайн — без звонков и ожидания</p>
+      </div>
+
+      <form id="booking-form">
+        <div class="form-group">
+          <label for="name">Имя <span style="color:#c0392b">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Иван" required>
+          <div class="error-msg" id="err-name">Введите имя</div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Телефон <span style="color:#c0392b">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="+7 999 123-45-67" required>
+          <div class="error-msg" id="err-phone">Телефон в формате +7...</div>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Дата <span style="color:#c0392b">*</span></label>
+          <input type="date" id="date" name="date" required>
+          <div class="error-msg" id="err-date">Выберите дату</div>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Время <span style="color:#c0392b">*</span></label>
+          <input type="time" id="time" name="time" required>
+          <div class="error-msg" id="err-time">Выберите время</div>
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Количество гостей <span style="color:#c0392b">*</span></label>
+          <select id="guests" name="guests" required>
+            <option value="">Выберите</option>
+            <option value="1">1 гость</option>
+            <option value="2">2 гостя</option>
+            <option value="3">3 гостя</option>
+            <option value="4">4 гостя</option>
+            <option value="5">5 гостей</option>
+            <option value="6">6 гостей</option>
+            <option value="7">7 гостей</option>
+            <option value="8">8 гостей</option>
+            <option value="9">8+ гостей</option>
+          </select>
+          <div class="error-msg" id="err-guests">Укажите количество гостей</div>
+        </div>
+
+        <div class="form-group">
+          <label for="comment">Комментарий</label>
+          <textarea id="comment" name="comment" placeholder="Например: место у окна, день рождения"></textarea>
+        </div>
+        <!-- Honeypot поле -->
+        <div style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true">
+          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn-submit" id="submitBtn">Отправить заявку</button>
+      </form>
+
+      <div id="success-message">
+        <h3>Спасибо!</h3>
+        <p>Мы свяжемся с вами для подтверждения брони.</p>
+        <button type="button" class="btn-reset" id="resetForm">Оформить ещё одну бронь</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="contacts" id="contacts">
+    <div class="contacts-grid">
+      <div class="contact-card">
+        <h2>Контакты</h2>
+
+        <div class="contact-item">
+          <div class="icon-box" aria-hidden="true">📍</div>
+          <div>
+            <strong>Адрес:</strong><br>
+            ул. Малая Ордынка, 15, Москва
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box" aria-hidden="true">📞</div>
+          <div>
+            <strong>Телефон:</strong><br>
+            <a href="tel:+74951234567">+7 495 123-45-67</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box" aria-hidden="true">🕒</div>
+          <div>
+            <strong>Часы работы:</strong><br>
+            Пн–Чт: 12:00–23:00<br>
+            Пт–Сб: 12:00–00:00<br>
+            Вс: 12:00–22:00
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-box" aria-hidden="true">🗺️</div>
+          <div>
+            <strong>Как проехать:</strong><br>
+            <a href="#" target="_blank" rel="noopener">Открыть на карте (заглушка)</a>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a href="#" target="_blank" rel="noopener" aria-label="ВКонтакте">🅥</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Telegram">✈</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Pinterest">📷</a>
+        </div>
+      </div>
+
+      <div class="contact-card" style="text-align:center;">
+        <h3 style="color:var(--green); margin-bottom:18px;">Бронируйте онлайн</h3>
+        <p style="color:var(--text-muted); margin-bottom:18px;">Заполните форму выше — мы перезвоним в течение 15 минут.</p>
+        <a href="#booking" class="btn btn-green">Перейти к бронированию</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-copy">© 2026 «Тбилисо». Ресторан грузинской кухни, Москва.</div>
+    <div class="footer-note">Сайт вымышлен, создан для демонстрации лендинга бронирования.</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Мобильное меню
+  var menuToggle = document.getElementById('menuToggle');
+  var navPanel = document.getElementById('navPanel');
+
+  menuToggle.addEventListener('click', function () {
+    var isOpen = navPanel.classList.contains('open');
+    if (isOpen) {
+      navPanel.classList.remove('open');
+      menuToggle.classList.remove('open');
+      document.body.style.overflow = '';
+    } else {
+      navPanel.classList.add('open');
+      menuToggle.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+
+  // Закрытие по клику на ссылку навигации
+  document.querySelectorAll('.nav-links a').forEach(function (link) {
+    link.addEventListener('click', function() {
+      navPanel.classList.remove('open');
+      menuToggle.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // === Бронирование ===
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwvgYyxCfzLb1oEvddfb-ltU1Xw705SZ6qVqZ2whaJqH3Q51y6sIrpV7bMpLXzKf8NBGg/exec';
+  // ^ URL веб-приложения Google Apps Script.
+
+  var form = document.getElementById('booking-form');
+  var success = document.getElementById('success-message');
+  var submitBtn = document.getElementById('submitBtn');
+  var resetBtn = document.getElementById('resetForm');
+
+  var fields = {
+    name: document.getElementById('name'),
+    phone: document.getElementById('phone'),
+    date: document.getElementById('date'),
+    time: document.getElementById('time'),
+    guests: document.getElementById('guests')
+  };
+
+  var errors = {
+    name: document.getElementById('err-name'),
+    phone: document.getElementById('err-phone'),
+    date: document.getElementById('err-date'),
+    time: document.getElementById('err-time'),
+    guests: document.getElementById('err-guests')
+  };
+
+  function clearErrors() {
+    Object.values(fields).forEach(function (el) {
+      el.classList.remove('input-error');
+    });
+    Object.values(errors).forEach(function (el) {
+      el.style.display = 'none';
+    });
+  }
+
+  function showError(key) {
+    fields[key].classList.add('input-error');
+    errors[key].style.display = 'block';
+    fields[key].focus();
+  }
+
+  function validatePhone(value) {
+    var digits = value.replace(/\D/g, '');
+    return value.startsWith('+7') && digits.length >= 11;
+  }
+
+  function validate() {
+    clearErrors();
+    var ok = true;
+
+    if (!fields.name.value.trim()) { showError('name'); ok = false; }
+    if (!fields.phone.value.trim() || !validatePhone(fields.phone.value.trim())) { showError('phone'); ok = false; }
+    if (!fields.date.value) { showError('date'); ok = false; }
+    if (!fields.time.value) { showError('time'); ok = false; }
+    if (!fields.guests.value) { showError('guests'); ok = false; }
+
+    return ok;
+  }
+
+  function showSuccessState() {
+    form.style.display = 'none';
+    success.style.display = 'flex';
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  resetBtn.addEventListener('click', function () {
+    form.reset();
+    clearErrors();
+    success.style.display = 'none';
+    form.style.display = 'flex';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Отправить заявку';
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (!validate()) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправка...';
+
+    var formData = new FormData(form);
+    var body = new URLSearchParams();
+    formData.forEach(function (value, key) {
+      body.append(key, value);
+    });
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: body
+    })
+    .then(function (response) {
+      if (!response.ok) throw new Error('Ошибка сервера');
+      showSuccessState();
+    })
+    .catch(function () {
+      alert('Не удалось отправить заявку. Пожалуйста, попробуйте ещё раз или позвоните нам.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Отправить заявку';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
